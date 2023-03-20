@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "start": "node app.js",
-    "test": "jest --forceExit"
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.21.1",

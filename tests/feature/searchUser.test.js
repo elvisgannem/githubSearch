@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../../app');
+const server = require('../../app');
 const baseURL = 'http://localhost:3001';
 
 describe('GET /users', (done) => {
@@ -12,4 +12,8 @@ describe('GET /users', (done) => {
         const response = await request(baseURL).get('/users');
         expect(response.body).toHaveLength(10)
     })
+});
+
+afterAll(() => {
+    server.close();
 });
