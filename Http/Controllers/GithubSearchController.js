@@ -1,12 +1,12 @@
-const SearchUser = require('../../core/Application/Github/SearchUser/SearchUser');
+const SearchUsers = require('../../core/Application/Github/SearchUsers/SearchUsers');
 const UserDetails = require('../../core/Application/Github/UserDetails/UserDetails');
 const GetUserRepos = require('../../core/Application/Github/GetUserRepos/GetUserRepos');
 
 exports.user_list = async (req, res) => {
     try {
         const since = req.query.since;
-        const searchUserService = new SearchUser();
-        const result = await searchUserService.handle(since, 10);
+        const searchUsersService = new SearchUsers();
+        const result = await searchUsersService.handle(since, 10);
         res.send(result);
     } catch (error) {
         res.status(500).send('Something went wrong!');
