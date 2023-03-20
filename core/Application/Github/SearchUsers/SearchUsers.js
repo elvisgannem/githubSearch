@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-class SearchUser {
+class SearchUsers {
     #baseURL = 'http://api.github.com/users';
 
     async handle(since, perPage) {
@@ -16,4 +16,4 @@ class SearchUser {
     }
 }
 
-module.exports = SearchUser;
+module.exports = SearchUsers;
